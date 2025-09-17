@@ -10,7 +10,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "optimize-images": "node scripts/optimize-images.js",
+    "optimize-images": "node scripts/optimize-images.mjs",
     "analyze": "ANALYZE=true npm run build",
     "predeploy": "npm run build",
     "deploy": "node --experimental-modules --es-module-specifier-resolution=node scripts/deploy.js"
