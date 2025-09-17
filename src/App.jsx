@@ -1,18 +1,13 @@
-import { Suspense, lazy, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Suspense, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import Footer from './components/Footer';
 import { initAnalytics, trackPageView } from './utils/analytics';
 import LoadingSpinner from './components/common/LoadingSpinner';
-
-// Lazy load components
-const Services = lazy(() => import('./components/Services'));
-const Portfolio = lazy(() => import('./components/Portfolio'));
-const Testimonials = lazy(() => import('./components/Testimonials'));
-const Pricing = lazy(() => import('./components/Pricing'));
-const FAQ = lazy(() => import('./components/FAQ'));
-const Contact = lazy(() => import('./components/Contact'));
+import HomeSections from './components/HomeSections';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import CookiePolicy from './pages/CookiePolicy';
 
 function App() {
   const location = useLocation();
@@ -26,27 +21,37 @@ function App() {
   useEffect(() => {
     trackPageView(location.pathname + location.search);
   }, [location]);
+
+  // Scroll to hash section when present (works for /#services etc.)
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      // Delay to ensure route content is rendered
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0);
+    }
+  }, [location]);
+
+  // If no hash, scroll to top on route change so content is visible
+  useEffect(() => {
+    if (!location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [location.pathname]);
   return (
     <div className="min-h-screen">
       <Navbar />
-      <Hero />
       <Suspense fallback={<LoadingSpinner />}>
-        <Services />
-      </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Portfolio />
-      </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Testimonials />
-      </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Pricing />
-      </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>
-        <FAQ />
-      </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomeSections />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+        </Routes>
       </Suspense>
       <Footer />
     </div>

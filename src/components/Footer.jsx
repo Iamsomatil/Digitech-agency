@@ -9,6 +9,7 @@ import {
   ArrowRight,
   Heart
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -30,12 +31,8 @@ const Footer = () => {
     'SEO Services'
   ];
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // We navigate using hash routes to allow cross-page navigation back to the homepage
+  // and then scroll to the section there.
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -94,13 +91,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.id}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
+                  <Link
+                    to={`/#${link.id}`}
                     className="text-gray-300 hover:text-primary-400 transition-colors duration-200 flex items-center group"
                   >
                     <span>{link.name}</span>
                     <ArrowRight className="h-3 w-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -112,13 +109,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <button
-                    onClick={() => scrollToSection('services')}
+                  <Link
+                    to="/#services"
                     className="text-gray-300 hover:text-primary-400 transition-colors duration-200 flex items-center group"
                   >
                     <span>{service}</span>
                     <ArrowRight className="h-3 w-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -160,15 +157,15 @@ const Footer = () => {
             </div>
             
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-primary-400 transition-colors duration-200">
+              <Link to="/privacy-policy" className="hover:text-primary-400 transition-colors duration-200">
                 Privacy Policy
-              </a>
-              <a href="#" className="hover:text-primary-400 transition-colors duration-200">
+              </Link>
+              <Link to="/terms-of-service" className="hover:text-primary-400 transition-colors duration-200">
                 Terms of Service
-              </a>
-              <a href="#" className="hover:text-primary-400 transition-colors duration-200">
+              </Link>
+              <Link to="/cookie-policy" className="hover:text-primary-400 transition-colors duration-200">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

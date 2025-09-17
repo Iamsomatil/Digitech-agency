@@ -22,7 +22,7 @@ const FAQ = () => {
       answer: "Absolutely! Our digital marketing services are designed to reach global audiences effectively. We develop data-driven strategies that consider cultural nuances, language localization, and regional platform preferences. Our services include international SEO, paid advertising, content marketing, and social media management tailored to your target markets."
     },
     {
-      question: "What&apos;s your approach to mobile-first development?",
+      question: "What is your approach to mobile-first development?",
       answer: "With mobile devices accounting for the majority of global internet traffic, we prioritize mobile-first development. We create responsive, performant applications that work seamlessly across all device types. Our solutions are built with accessibility in mind, ensuring an optimal experience for all users regardless of their device or connection speed."
     },
     {
@@ -31,7 +31,7 @@ const FAQ = () => {
     },
     {
       question: "How do you handle international hosting and domains?",
-      answer: "We help you choose the optimal hosting solution based on your target audience's location, whether that's a global CDN, regional hosting, or a multi-cloud setup. For domains, we assist with registering the most effective TLDs for your international presence and can manage the entire setup process to ensure optimal performance worldwide."
+      answer: "We help you choose the optimal hosting solution based on your target audience's location, whether that is a global CDN, regional hosting, or a multi-cloud setup. For domains, we assist with registering the most effective TLDs for your international presence and can manage the entire setup process to ensure optimal performance worldwide."
     },
     {
       question: "What support do you offer after launch?",
@@ -109,7 +109,7 @@ const FAQ = () => {
               Still Have Questions?
             </h3>
             <p className="text-gray-600 mb-6">
-              Can't find the answer you're looking for? We're here to help!
+              Can&apos;t find the answer you&apos;re looking for? We&apos;re here to help!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
