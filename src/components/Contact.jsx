@@ -28,20 +28,21 @@ const Contact = () => {
   const services = [
     'Web Design & Development',
     'Mobile App Development',
-    'UI/UX Design',
     'E-commerce Solutions',
     'Digital Marketing',
     'Brand Identity',
     'SEO & Content Strategy',
-    'Custom Software'
+    'Custom Software',
+    'AI Automation',
+    'CRM Integration'
   ];
 
   const budgetRanges = [
-    'Under ₦2,000,000',
-    '₦2,000,000 - ₦5,000,000',
-    '₦5,000,000 - ₦10,000,000',
-    '₦10,000,000 - ₦25,000,000',
-    '₦25,000,000+',
+    'Under $2,500',
+    '$2,500 - $5,000',
+    '$5,000 - $10,000',
+    '$10,000 - $25,000',
+    '$25,000+',
     'Need consultation'
   ];
 

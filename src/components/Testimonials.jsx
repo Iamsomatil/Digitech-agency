@@ -7,33 +7,33 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "James Wilson",
-      position: "CEO, GlobalPay",
-      company: "GlobalPay",
+      name: "Troy Austria",
+      position: "CEO, Sunlife Housing Corp",
+      company: "Sunlife Housing Corp",
       image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       rating: 5,
-      text: "Pixelforge transformed our digital banking platform with exceptional attention to detail. Their team delivered a secure, user-friendly interface that increased our customer engagement by 75% and reduced support tickets by 40%.",
-      project: "Digital Banking Platform"
+      text: "Pixelforge delivered exactly what we needed — a complete website revamp, AI workflow automation, and LinkedIn optimization that elevated our brand and streamlined operations.",
+      project: "Website revamp • AI workflow automation • LinkedIn optimization"
     },
     {
       id: 2,
-      name: "Sophia Chen",
-      position: "CMO, ShopGlobal",
-      company: "ShopGlobal",
-      image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Percy Smith",
+      position: "CEO, Advitravels",
+      company: "Advitravels",
+      image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       rating: 5,
-      text: "Working with Pixelforge was a game-changer for our e-commerce platform. Their digital marketing strategy increased our conversion rate by 200% and our average order value by 35%. Truly outstanding results!",
-      project: "E-commerce Marketing Strategy"
+      text: "From website enhancements to AI workflow automation and LinkedIn optimization, Pixelforge helped us modernize our operations and grow faster.",
+      project: "Website revamp • AI workflow automation • LinkedIn optimization"
     },
     {
       id: 3,
-      name: "Miguel Rodriguez",
-      position: "Founder, HealthConnect",
-      company: "HealthConnect",
-      image: "https://images.pexels.com/photos/2182974/pexels-photo-2182974.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Hosea Barnwell",
+      position: "Founder, Hosvi Marketing Agency",
+      company: "Hosvi Marketing Agency",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       rating: 5,
-      text: "Pixelforge's mobile app development team created a telemedicine solution that's now used by over 100,000 patients worldwide. Their technical expertise and understanding of global healthcare needs is unparalleled.",
-      project: "Telemedicine Mobile App"
+      text: "We launched our brand with a full business setup — website, automation, business account, and LinkedIn optimization. Pixelforge executed end-to-end with precision.",
+      project: "Full business setup • Website • Automation • Business account • LinkedIn optimization"
     },
     {
       id: 4,
@@ -94,7 +94,7 @@ const Testimonials = () => {
             Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Hear from businesses across Africa that have transformed their digital presence with Pixelforge
+            Hear from businesses around the world that have transformed their digital presence with Pixelforge
           </p>
         </div>
 
@@ -177,19 +177,20 @@ const Testimonials = () => {
         {/* Client Logos */}
         <div className="mt-16">
           <p className="text-center text-gray-500 mb-8 font-medium">
-            Trusted by innovative businesses across Africa
+            Trusted by innovative businesses worldwide
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8 items-center opacity-60">
             {[
-              "PayAfrik",
-              "AfriShop",
-              "MedAccess",
-              "EduTech",
-              "LogistixNG"
+              "SLCH",
+              "Advitravels",
+              "Hosvi",
+              "BluePeak",
+              "Globex",
+              "Innotech"
             ].map((company, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gray-200 h-12 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-600 font-semibold text-sm">{company}</span>
+                <div className="bg-gray-200 h-10 md:h-12 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-600 font-semibold text-xs sm:text-sm">{company}</span>
                 </div>
               </div>
             ))}

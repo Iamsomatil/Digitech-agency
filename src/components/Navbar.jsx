@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [onHero, setOnHero] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +12,20 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Detect whether we are on top of the hero section to switch text color for contrast
+  useEffect(() => {
+    const hero = document.getElementById('home');
+    if (!hero) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setOnHero(entry.isIntersecting && entry.intersectionRatio > 0);
+      },
+      { root: null, threshold: 0.1 }
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (sectionId) => {
@@ -33,9 +48,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
+      onHero ? 'bg-transparent' : 'bg-white/90 backdrop-blur border-b border-gray-200/80'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
@@ -45,7 +58,7 @@ const Navbar = () => {
               src="/pixel-logo.jpg" 
               alt="Pixelforge Logo" 
               className={`h-10 w-auto transition-opacity duration-300 ${
-                isScrolled ? 'opacity-100' : 'opacity-90 hover:opacity-100'
+                isScrolled ? 'opacity-100' : 'opacity-95 hover:opacity-100'
               }`}
             />
           </div>
@@ -57,8 +70,8 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-primary-500 ${
-                    isScrolled ? 'text-gray-700' : 'text-white'
+                  className={`px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-primary-600 ${
+                    onHero ? 'text-white' : 'text-gray-800'
                   }`}
                 >
                   {item.name}
@@ -82,7 +95,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 rounded-md transition-colors duration-300 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+                onHero ? 'text-white' : 'text-gray-800'
               }`}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

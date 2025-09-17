@@ -3,7 +3,7 @@ import {
   Search, 
   Smartphone, 
   BarChart3, 
-  Palette, 
+  Database,
   Zap,
   ArrowRight,
   CheckCircle
@@ -29,7 +29,7 @@ const Services = () => {
       icon: Smartphone,
       title: "Mobile Solutions",
       description: "Native and cross-platform mobile applications designed to provide seamless user experiences across all devices.",
-      features: ["iOS & Android", "React Native", "UI/UX Design", "App Store Optimization"],
+      features: ["iOS & Android", "React Native", "Offline-first", "App Store Optimization"],
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -40,18 +40,18 @@ const Services = () => {
       color: "from-orange-500 to-red-500"
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive interfaces that enhance user engagement and drive conversions.",
-      features: ["User Research", "Wireframing", "Prototyping", "User Testing"],
-      color: "from-indigo-500 to-purple-500"
+      icon: Zap,
+      title: "AI Automation",
+      description: "Automate workflows and operations with AI agents, chatbots, and intelligent data processing tailored to your business.",
+      features: ["Process Automation", "AI Chatbots & Assistants", "Document/Data Extraction", "Auto-reporting & Alerts"],
+      color: "from-yellow-500 to-amber-500"
     },
     {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "Modernize your business with custom digital solutions that drive efficiency and growth.",
-      features: ["Process Automation", "Cloud Solutions", "System Integration", "Digital Consulting"],
-      color: "from-yellow-500 to-amber-500"
+      icon: Database,
+      title: "CRM Integration",
+      description: "Integrate and customize CRMs (HubSpot, Salesforce, Zoho) with your website and tools for a unified customer journey.",
+      features: ["Lead Capture & Sync", "Sales Pipeline Setup", "Email & Marketing Automation", "Custom Dashboards"],
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
@@ -113,7 +113,7 @@ const Services = () => {
               Ready to Elevate Your Digital Presence?
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Let's collaborate to turn your vision into a powerful digital reality
+              Let&apos;s collaborate to turn your vision into a powerful digital reality
             </p>
             <button
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
