@@ -1,0 +1,13 @@
+[build]
+  command = "npm install --include=dev && npm rebuild sharp && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--prefix=./.netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  node_bundler = "esbuild"
