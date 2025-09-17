@@ -9,10 +9,10 @@ const Portfolio = () => {
       id: 1,
       title: "E-commerce Platform",
       category: "web",
-      description: "Modern e-commerce solution with advanced features and seamless user experience.",
+      description: "A high-performance e-commerce platform built with modern web technologies for a leading retail brand in Nigeria.",
       image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      results: ["300% increase in sales", "50% faster load times", "95% user satisfaction"],
+      technologies: ["React", "Next.js", "Node.js", "MongoDB", "Paystack"],
+      results: ["300% increase in sales", "60% faster page loads", "95% user satisfaction"],
       link: "#",
       github: "#"
     },
@@ -20,10 +20,10 @@ const Portfolio = () => {
       id: 2,
       title: "Healthcare Mobile App",
       category: "mobile",
-      description: "Patient management system with appointment scheduling and telemedicine features.",
+      description: "A telemedicine application connecting patients with healthcare providers across Nigeria.",
       image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["React Native", "Firebase", "Node.js", "Socket.io"],
-      results: ["10,000+ active users", "4.8 app store rating", "40% reduction in wait times"],
+      technologies: ["React Native", "Firebase", "Node.js", "WebRTC"],
+      results: ["50,000+ downloads", "4.8 app store rating", "30% reduction in hospital visits"],
       link: "#",
       github: "#"
     },
@@ -31,54 +31,54 @@ const Portfolio = () => {
       id: 3,
       title: "Digital Marketing Campaign",
       category: "marketing",
-      description: "Comprehensive digital marketing strategy for a SaaS startup.",
+      description: "Comprehensive digital marketing strategy for a leading African fintech company.",
       image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Google Ads", "Facebook Ads", "SEO", "Content Marketing"],
-      results: ["500% ROI increase", "200% lead generation", "150% brand awareness"],
+      technologies: ["Google Ads", "Social Media", "Content Strategy", "Analytics"],
+      results: ["400% ROI", "300% lead generation", "200% brand awareness"],
       link: "#",
       github: "#"
     },
     {
       id: 4,
-      title: "Restaurant Management System",
+      title: "Banking Web App",
       category: "web",
-      description: "Complete restaurant management solution with POS integration and analytics.",
-      image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Vue.js", "Laravel", "MySQL", "Payment Gateway"],
-      results: ["60% efficiency increase", "35% cost reduction", "99.9% uptime"],
+      description: "Secure and scalable internet banking platform for a leading Nigerian bank.",
+      image: "https://images.pexels.com/photos/4968386/pexels-photo-4968386.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      technologies: ["Angular", "Java Spring", "PostgreSQL", "OAuth 2.0"],
+      results: ["99.99% uptime", "2M+ users", "40% reduction in support tickets"],
       link: "#",
       github: "#"
     },
     {
       id: 5,
-      title: "Fitness Tracking App",
+      title: "Logistics Mobile App",
       category: "mobile",
-      description: "Comprehensive fitness app with workout tracking and social features.",
-      image: "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Flutter", "Firebase", "Machine Learning", "Wearable Integration"],
-      results: ["50,000+ downloads", "4.7 app rating", "80% user retention"],
+      description: "End-to-end logistics and delivery management application for African markets.",
+      image: "https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      technologies: ["Flutter", "Node.js", "MongoDB", "Google Maps API"],
+      results: ["100,000+ downloads", "4.7 app rating", "50% faster deliveries"],
       link: "#",
       github: "#"
     },
     {
       id: 6,
-      title: "Brand Identity Design",
+      title: "Brand Identity & UI/UX",
       category: "design",
-      description: "Complete brand redesign for a tech startup including logo and guidelines.",
+      description: "Complete brand identity and UI/UX design for a tech startup in Lagos.",
       image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Adobe Creative Suite", "Figma", "Brand Strategy", "Print Design"],
-      results: ["400% brand recognition", "250% social engagement", "180% website traffic"],
+      technologies: ["Figma", "Adobe Creative Suite", "User Research", "Prototyping"],
+      results: ["500% brand recognition", "300% user engagement", "200% conversion rate"],
       link: "#",
       github: "#"
     }
   ];
 
   const filters = [
-    { id: 'all', name: 'All Projects' },
+    { id: 'all', name: 'All Work' },
     { id: 'web', name: 'Web Development' },
     { id: 'mobile', name: 'Mobile Apps' },
     { id: 'marketing', name: 'Digital Marketing' },
-    { id: 'design', name: 'Design' }
+    { id: 'design', name: 'UI/UX Design' }
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -90,10 +90,10 @@ const Portfolio = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
-            Our Portfolio
+            Our Work Speaks Volumes
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our recent projects and see how we've helped businesses achieve their digital goals
+            Explore our portfolio of successful projects and see how we&apos;ve helped businesses across Africa transform digitally
           </p>
         </div>
 
@@ -189,10 +189,10 @@ const Portfolio = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
-            Ready to Start Your Project?
+            Ready to Transform Your Business?
           </h3>
           <p className="text-lg text-gray-600 mb-8">
-            Let's discuss how we can bring your vision to life
+            Let&apos;s collaborate to create something extraordinary together
           </p>
           <button
             onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}

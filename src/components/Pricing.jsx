@@ -5,16 +5,17 @@ const Pricing = () => {
     {
       name: "Starter",
       price: "1,999",
-      period: "one-time",
-      description: "Perfect for small businesses getting started online",
+      period: "USD",
+      description: "Perfect for small businesses and startups",
       features: [
         "5-page responsive website",
-        "Mobile-optimized design",
-        "Basic SEO setup",
-        "Contact form integration",
-        "Social media links",
-        "1 month support",
-        "Google Analytics setup"
+        "Mobile-first design",
+        "Basic SEO optimization",
+        "Contact form with payment integration",
+        "Social media integration",
+        "1 month support (business hours)",
+        "Google Analytics & Search Console setup",
+        "Basic security setup"
       ],
       notIncluded: [
         "E-commerce functionality",
@@ -27,21 +28,21 @@ const Pricing = () => {
       color: "border-gray-200"
     },
     {
-      name: "Professional",
+      name: "Business",
       price: "4,999",
-      period: "one-time",
-      description: "Ideal for growing businesses that need more features",
+      period: "USD",
+      description: "Ideal for growing businesses with specific needs",
       features: [
-        "10-page responsive website",
+        "10-15 page responsive website",
         "Custom design & animations",
         "Advanced SEO optimization",
-        "E-commerce functionality (up to 50 products)",
+        "E-commerce (up to 100 products)",
         "Payment gateway integration",
-        "Blog/CMS integration",
+        "Multilingual support",
         "3 months support",
         "Performance optimization",
-        "Security features",
-        "Email marketing setup"
+        "Enhanced security features",
+        "Basic digital marketing setup"
       ],
       notIncluded: [
         "Custom app development",
@@ -56,24 +57,23 @@ const Pricing = () => {
       name: "Enterprise",
       price: "Custom",
       period: "quote",
-      description: "Comprehensive solutions for large businesses",
+      description: "Tailored solutions for large businesses and corporations",
       features: [
-        "Unlimited pages",
-        "Custom web application",
-        "Advanced e-commerce (unlimited products)",
-        "Custom integrations & APIs",
-        "Advanced analytics dashboard",
+        "Custom web/mobile application",
+        "Advanced e-commerce solutions",
         "Multi-language support",
-        "6 months support",
+        "Custom integrations",
+        "Advanced analytics & reporting",
+        "6 months support with SLA",
         "Performance monitoring",
-        "Security audits",
+        "Security audits & compliance",
         "Dedicated project manager",
-        "Training sessions",
+        "Staff training",
         "24/7 priority support"
       ],
       notIncluded: [],
       popular: false,
-      cta: "Contact Us",
+      cta: "Get Custom Quote",
       color: "border-accent-500"
     }
   ];
@@ -81,27 +81,27 @@ const Pricing = () => {
   const addOns = [
     {
       name: "Digital Marketing Package",
-      price: "2,500",
-      period: "monthly",
-      description: "Complete digital marketing strategy and execution"
+      price: "999",
+      period: "monthly (USD)",
+      description: "Complete digital marketing strategy and implementation"
     },
     {
       name: "Mobile App Development",
-      price: "8,999",
-      period: "one-time",
-      description: "Native iOS and Android app development"
+      price: "15,000",
+      period: "starting from (USD)",
+      description: "Cross-platform mobile applications for iOS and Android"
     },
     {
       name: "Ongoing Maintenance",
-      price: "299",
-      period: "monthly",
-      description: "Regular updates, backups, and technical support"
+      price: "499",
+      period: "monthly (USD)",
+      description: "Regular updates, security patches, and technical support"
     },
     {
-      name: "Advanced Analytics Setup",
-      price: "1,499",
-      period: "one-time",
-      description: "Custom analytics dashboard and reporting"
+      name: "African Market Expansion",
+      price: "Custom",
+      period: "project-based",
+      description: "Localization and expansion services across African markets"
     }
   ];
 
@@ -110,10 +110,10 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
-            Transparent Pricing
+            Tailored Solutions for Global Businesses
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the perfect plan for your business. No hidden fees, no surprises.
+            Competitive pricing designed for businesses of all sizes. All prices in USD.
           </p>
         </div>
 
@@ -192,10 +192,10 @@ const Pricing = () => {
         <div className="bg-gray-50 rounded-2xl p-8">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
-              Additional Services
+              Value-Added Services
             </h3>
             <p className="text-lg text-gray-600">
-              Enhance your package with these additional services
+              Custom solutions to help your African business grow
             </p>
           </div>
 
@@ -232,7 +232,7 @@ const Pricing = () => {
               Not Sure Which Plan is Right for You?
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Schedule a free consultation and we'll help you choose the perfect solution
+              Schedule a free consultation and we&apos;ll help you choose the perfect solution
             </p>
             <button
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}

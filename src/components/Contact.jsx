@@ -26,32 +26,32 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState('');
 
   const services = [
-    'Web Development',
+    'Web Design & Development',
     'Mobile App Development',
-    'Digital Marketing',
+    'UI/UX Design',
     'E-commerce Solutions',
-    'Brand Design',
-    'SEO Services',
-    'Consulting',
-    'Other'
+    'Digital Marketing',
+    'Brand Identity',
+    'SEO & Content Strategy',
+    'Custom Software'
   ];
 
   const budgetRanges = [
-    'Under $5,000',
-    '$5,000 - $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000+',
-    'Not sure yet'
+    'Under ₦2,000,000',
+    '₦2,000,000 - ₦5,000,000',
+    '₦5,000,000 - ₦10,000,000',
+    '₦10,000,000 - ₦25,000,000',
+    '₦25,000,000+',
+    'Need consultation'
   ];
 
   const timelines = [
-    'ASAP',
-    'Within 1 month',
+    'Immediate start',
+    'Within 2 weeks',
     '1-3 months',
     '3-6 months',
     '6+ months',
-    'Just exploring'
+    'Planning phase'
   ];
 
   const validateEmail = (email) => {
@@ -311,8 +311,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">hello@digitalcraft.com</p>
-                    <p className="text-gray-600">support@digitalcraft.com</p>
+                    <p className="text-gray-600">Samsonoakinsanya@gmail.com</p>
                   </div>
                 </div>
                 
@@ -322,8 +321,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 987-6543</p>
+                    <p className="text-gray-600">+234 816 882 9686</p>
+                    <p className="text-gray-600">+234 805 093 8927</p>
                   </div>
                 </div>
                 
@@ -333,7 +332,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Office</h4>
-                    <p className="text-gray-600">123 Business District<br />Suite 456<br />City, State 12345</p>
+                    <p className="text-gray-600">9, Ebinpejo Street<br />Lagos, Nigeria</p>
                   </div>
                 </div>
                 
@@ -344,7 +343,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900">Business Hours</h4>
                     <div className="text-gray-600 space-y-1">
-                      <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                      <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
                       <p>Saturday: 10:00 AM - 4:00 PM</p>
                       <p>Sunday: Closed</p>
                     </div>
@@ -361,7 +360,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/2348168829686"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-green-500 hover:bg-green-600 text-white p-4 rounded-lg transition-all duration-300 transform hover:scale-105"
@@ -374,14 +373,14 @@ const Contact = () => {
                 </a>
                 
                 <button
-                  onClick={() => window.open('https://calendly.com/digitalcraft', '_blank')}
+                  onClick={() => window.open('mailto:Samsonoakinsanya@gmail.com?subject=Schedule%20a%20Consultation&body=Hi%20Pixelforge%20Team,%0A%0AI%27d%20like%20to%20schedule%20a%20consultation.%20Please%20let%20me%20know%20your%20availability.%0A%0ABest%20regards,', '_blank')}
                   className="flex items-center justify-between bg-primary-600 hover:bg-primary-700 text-white p-4 rounded-lg transition-all duration-300 transform hover:scale-105 w-full"
                 >
                   <div className="flex items-center space-x-3">
-                    <Calendar className="h-5 w-5" />
-                    <span className="font-semibold">Book Consultation</span>
+                    <Mail className="h-5 w-5" />
+                    <span className="font-semibold">Email for Consultation</span>
                   </div>
-                  <span className="text-sm opacity-90">Free 30 min</span>
+                  <span className="text-sm opacity-90">Quick response</span>
                 </button>
               </div>
             </div>

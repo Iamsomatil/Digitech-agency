@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const Testimonials = () => {
@@ -7,61 +7,61 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      position: "CEO, TechStart Inc.",
-      company: "TechStart Inc.",
-      image: "https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Adebayo Ogunlesi",
+      position: "CEO, PayAfrik",
+      company: "PayAfrik",
+      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       rating: 5,
-      text: "DigitalCraft transformed our online presence completely. Their team delivered a stunning website that not only looks amazing but also converts visitors into customers. Our sales increased by 300% within the first quarter!",
-      project: "E-commerce Platform Development"
+      text: "Pixelforge transformed our digital banking platform with exceptional attention to detail. Their team delivered a secure, user-friendly interface that increased our customer engagement by 75% and reduced support tickets by 40%.",
+      project: "Digital Banking Platform"
     },
     {
       id: 2,
-      name: "Michael Chen",
-      position: "Founder, HealthTech Solutions",
-      company: "HealthTech Solutions",
-      image: "https://images.pexels.com/photos/4253300/pexels-photo-4253300.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Ngozi Eze",
+      position: "CMO, AfriShop",
+      company: "AfriShop",
+      image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       rating: 5,
-      text: "Working with DigitalCraft was an absolute pleasure. They understood our vision for the healthcare app and delivered beyond our expectations. The app now has over 10,000 active users and a 4.8-star rating!",
-      project: "Mobile App Development"
+      text: "Working with Pixelforge was a game-changer for our e-commerce platform. Their digital marketing strategy increased our conversion rate by 200% and our average order value by 35%. Truly outstanding results!",
+      project: "E-commerce Marketing Strategy"
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      position: "Marketing Director, GrowthCorp",
-      company: "GrowthCorp",
-      image: "https://images.pexels.com/photos/3992657/pexels-photo-3992657.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Chinedu Okoro",
+      position: "Founder, MedAccess",
+      company: "MedAccess",
+      image: "https://images.pexels.com/photos/2182974/pexels-photo-2182974.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       rating: 5,
-      text: "The digital marketing campaign they created for us was phenomenal. We saw a 500% ROI increase and our brand awareness doubled. Their strategic approach and attention to detail is unmatched.",
-      project: "Digital Marketing Campaign"
+      text: "Pixelforge's mobile app development team created a telemedicine solution that's now used by over 100,000 patients across Africa. Their technical expertise and understanding of the African market is unparalleled.",
+      project: "Telemedicine Mobile App"
     },
     {
       id: 4,
-      name: "David Thompson",
-      position: "Owner, Restaurant Chain",
-      company: "Bella Vista Restaurants",
-      image: "https://images.pexels.com/photos/4253302/pexels-photo-4253302.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Amina Mohammed",
+      position: "Director, EduTech Africa",
+      company: "EduTech Africa",
+      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       rating: 5,
-      text: "The restaurant management system they built for us streamlined our entire operation. We've seen a 60% increase in efficiency and our customers love the new ordering experience.",
-      project: "Custom Software Development"
+      text: "The learning management system developed by Pixelforge has been instrumental in our mission to provide quality education across Africa. Their solution is robust, scalable, and user-friendly for both students and educators.",
+      project: "E-learning Platform"
     },
     {
       id: 5,
-      name: "Lisa Park",
-      position: "Founder, FitLife App",
-      company: "FitLife Technologies",
-      image: "https://images.pexels.com/photos/3992658/pexels-photo-3992658.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Tunde Williams",
+      position: "CTO, LogistixNG",
+      company: "LogistixNG",
+      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       rating: 5,
-      text: "DigitalCraft brought our fitness app idea to life with incredible precision. The app has been downloaded over 50,000 times and maintains an 80% user retention rate. Exceptional work!",
-      project: "Mobile App Development"
+      text: "Pixelforge's logistics management system optimized our entire operation, reducing delivery times by 45% and increasing customer satisfaction to 98%. Their technical expertise and problem-solving approach are exceptional.",
+      project: "Logistics Management System"
     }
   ];
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [testimonials.length]);
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => 
@@ -73,7 +73,7 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(nextTestimonial, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextTestimonial]);
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, index) => (
@@ -91,10 +91,10 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
-            What Our Clients Say
+            Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+            Hear from businesses across Africa that have transformed their digital presence with Pixelforge
           </p>
         </div>
 
@@ -115,7 +115,7 @@ const Testimonials = () => {
 
             {/* Testimonial Text */}
             <blockquote className="text-xl md:text-2xl text-gray-700 text-center mb-8 leading-relaxed font-medium">
-              "{testimonials[currentIndex].text}"
+              &ldquo;{testimonials[currentIndex].text}&rdquo;
             </blockquote>
 
             {/* Client Info */}
@@ -177,15 +177,15 @@ const Testimonials = () => {
         {/* Client Logos */}
         <div className="mt-16">
           <p className="text-center text-gray-500 mb-8 font-medium">
-            Trusted by leading companies worldwide
+            Trusted by innovative businesses across Africa
           </p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60">
             {[
-              "TechStart Inc.",
-              "HealthTech Solutions",
-              "GrowthCorp",
-              "Bella Vista",
-              "FitLife Technologies"
+              "PayAfrik",
+              "AfriShop",
+              "MedAccess",
+              "EduTech",
+              "LogistixNG"
             ].map((company, index) => (
               <div key={index} className="text-center">
                 <div className="bg-gray-200 h-12 rounded-lg flex items-center justify-center">

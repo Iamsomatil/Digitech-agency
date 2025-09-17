@@ -45,26 +45,26 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <h3 className="text-3xl font-display font-bold mb-4 text-primary-400">
-              DigitalCraft
+              Pixelforge
             </h3>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              We help ambitious businesses grow through strategic digital marketing, 
-              stunning web design, and data-driven solutions that deliver real results.
+              Crafting exceptional digital experiences through innovative design and 
+              strategic development that transforms businesses and drives growth.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-3 text-primary-400" />
-                <span>hello@digitalcraft.com</span>
+                <span>Samsonoakinsanya@gmail.com</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-3 text-primary-400" />
-                <span>+1 (555) 123-4567</span>
+                <span>+234 8168829686 / +234 8050938927</span>
               </div>
               <div className="flex items-center text-gray-300">
-                <MapPin className="h-4 w-4 mr-3 text-primary-400" />
-                <span>123 Business District, Suite 456</span>
+                <MapPin className="h-4 w-4 mr-3 text-primary-400 flex-shrink-0" />
+                <span>9, Ebinpejo Street, Lagos, Nigeria</span>
               </div>
             </div>
 

@@ -14,44 +14,44 @@ const Services = () => {
     {
       icon: Globe,
       title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies for optimal performance and user experience.",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Mobile-First"],
+      description: "Custom, responsive websites and web applications built with cutting-edge technologies for optimal performance and user engagement.",
+      features: ["Responsive Design", "SEO Optimized", "Blazing Fast", "Mobile-First"],
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Search,
-      title: "Digital Marketing",
-      description: "Comprehensive digital marketing strategies to increase your online visibility and drive qualified leads.",
-      features: ["SEO & SEM", "Social Media", "Content Marketing", "Email Campaigns"],
+      title: "Digital Strategy",
+      description: "Data-driven digital marketing strategies that increase your online presence and convert visitors into customers.",
+      features: ["SEO & Content Strategy", "Social Media Management", "PPC Campaigns", "Analytics & Reporting"],
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: Smartphone,
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications that engage users and drive business growth.",
-      features: ["iOS & Android", "Cross-Platform", "UI/UX Design", "App Store Optimization"],
+      title: "Mobile Solutions",
+      description: "Native and cross-platform mobile applications designed to provide seamless user experiences across all devices.",
+      features: ["iOS & Android", "React Native", "UI/UX Design", "App Store Optimization"],
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: BarChart3,
-      title: "Analytics & Insights",
-      description: "Data-driven insights and analytics to help you make informed business decisions and optimize performance.",
-      features: ["Performance Tracking", "Conversion Optimization", "Custom Reports", "ROI Analysis"],
+      title: "E-commerce Development",
+      description: "Scalable e-commerce solutions that drive sales and provide exceptional shopping experiences.",
+      features: ["Shopify & WooCommerce", "Payment Integration", "Inventory Management", "Performance Optimization"],
       color: "from-orange-500 to-red-500"
     },
     {
       icon: Palette,
-      title: "Brand Design",
-      description: "Complete brand identity design including logos, visual guidelines, and marketing materials.",
-      features: ["Logo Design", "Brand Guidelines", "Marketing Materials", "Visual Identity"],
+      title: "UI/UX Design",
+      description: "Beautiful, intuitive interfaces that enhance user engagement and drive conversions.",
+      features: ["User Research", "Wireframing", "Prototyping", "User Testing"],
       color: "from-indigo-500 to-purple-500"
     },
     {
       icon: Zap,
-      title: "Automation Solutions",
-      description: "Streamline your business processes with custom automation solutions and integrations.",
-      features: ["Workflow Automation", "API Integrations", "Process Optimization", "Custom Tools"],
-      color: "from-yellow-500 to-orange-500"
+      title: "Digital Transformation",
+      description: "Modernize your business with custom digital solutions that drive efficiency and growth.",
+      features: ["Process Automation", "Cloud Solutions", "System Integration", "Digital Consulting"],
+      color: "from-yellow-500 to-amber-500"
     }
   ];
 
@@ -60,10 +60,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
-            Our Services
+            Our Digital Expertise
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer comprehensive digital solutions to help your business thrive in the modern marketplace
+            Comprehensive digital solutions designed to transform your business and drive measurable results
           </p>
         </div>
 
@@ -108,12 +108,12 @@ const Services = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              Ready to Transform Your Business?
+              Ready to Elevate Your Digital Presence?
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Let's discuss how our services can help you achieve your goals
+              Let's collaborate to turn your vision into a powerful digital reality
             </p>
             <button
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}

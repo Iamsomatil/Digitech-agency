@@ -6,44 +6,44 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "How long does it take to complete a project?",
-      answer: "Project timelines vary depending on complexity and scope. A basic website typically takes 2-4 weeks, while more complex projects like e-commerce platforms or custom applications can take 6-12 weeks. We'll provide a detailed timeline during our initial consultation and keep you updated throughout the process."
+      question: "What makes Pixelforge different from other digital agencies?",
+      answer: "At Pixelforge, we combine deep technical expertise with a user-centric approach to create digital experiences that deliver real business results. Our team has successfully delivered over 500 projects worldwide, giving us unique insights into diverse market needs and user behaviors. We're not just developers; we're strategic partners in your digital transformation journey."
     },
     {
-      question: "Do you provide ongoing support and maintenance?",
-      answer: "Yes! We offer comprehensive support packages that include regular updates, security monitoring, backups, and technical support. Our maintenance plans start at $299/month and can be customized based on your specific needs. We also provide 1-6 months of free support depending on your chosen package."
+      question: "How do you ensure our website will perform well globally?",
+      answer: "We build all our solutions with performance as a core principle. Our sites use modern optimization techniques including code splitting, lazy loading, and responsive images to ensure fast load times across all devices and network conditions. We conduct thorough testing across different devices, browsers, and network speeds to guarantee optimal performance for your global audience."
     },
     {
-      question: "Can you help with digital marketing and SEO?",
-      answer: "Absolutely! We offer complete digital marketing services including SEO optimization, Google Ads management, social media marketing, content creation, and email marketing campaigns. Our marketing packages start at $2,500/month and are designed to drive qualified leads and increase your online visibility."
+      question: "What payment solutions do you integrate?",
+      answer: "We integrate a wide range of global and regional payment solutions including Stripe, PayPal, Adyen, and various local payment processors. Our team will help you select the best payment mix based on your target markets, ensuring secure transactions while maximizing conversion rates. We stay updated with the latest payment trends and compliance requirements worldwide."
     },
     {
-      question: "What technologies do you use for development?",
-      answer: "We use modern, industry-standard technologies including React, Node.js, Python, PHP, and various databases like MongoDB and MySQL. For mobile apps, we develop using React Native and Flutter for cross-platform compatibility. We always choose the best technology stack for your specific project requirements."
+      question: "Can you help with international digital marketing?",
+      answer: "Absolutely! Our digital marketing services are designed to reach global audiences effectively. We develop data-driven strategies that consider cultural nuances, language localization, and regional platform preferences. Our services include international SEO, paid advertising, content marketing, and social media management tailored to your target markets."
     },
     {
-      question: "Do you work with businesses outside your local area?",
-      answer: "Yes, we work with clients worldwide! We have experience collaborating remotely and use modern communication tools to ensure smooth project management. We've successfully completed projects for clients across different time zones and maintain regular communication throughout the development process."
+      question: "What&apos;s your approach to mobile-first development?",
+      answer: "With mobile devices accounting for the majority of global internet traffic, we prioritize mobile-first development. We create responsive, performant applications that work seamlessly across all device types. Our solutions are built with accessibility in mind, ensuring an optimal experience for all users regardless of their device or connection speed."
     },
     {
-      question: "What's included in your web development packages?",
-      answer: "Our packages include responsive design, mobile optimization, basic SEO setup, contact forms, social media integration, Google Analytics, and initial support. Higher-tier packages also include e-commerce functionality, custom animations, advanced integrations, and extended support periods. We can also customize packages based on your specific needs."
+      question: "What security measures do you implement?",
+      answer: "We implement enterprise-grade security measures including end-to-end encryption, regular security audits, DDoS protection, and compliance with global data protection regulations like GDPR and CCPA. Our team stays ahead of emerging security threats and implements industry best practices to protect your business and customer data."
     },
     {
-      question: "How do you handle project communication and updates?",
-      answer: "We believe in transparent communication. You'll have a dedicated project manager who will provide regular updates via email, scheduled calls, and our project management platform. We typically provide weekly progress reports and are always available for questions or concerns throughout the project."
+      question: "How do you handle international hosting and domains?",
+      answer: "We help you choose the optimal hosting solution based on your target audience's location, whether that's a global CDN, regional hosting, or a multi-cloud setup. For domains, we assist with registering the most effective TLDs for your international presence and can manage the entire setup process to ensure optimal performance worldwide."
     },
     {
-      question: "What if I need changes after the project is completed?",
-      answer: "We include a certain number of revisions in each package, and provide ongoing support for a specified period. After that, we offer flexible maintenance plans or can handle additional changes on an hourly basis. We're committed to ensuring your complete satisfaction with the final product."
+      question: "What support do you offer after launch?",
+      answer: "Our comprehensive post-launch support includes 24/7 monitoring, regular updates, security patches, and performance optimization. We offer flexible support packages tailored to your needs, from basic maintenance to full-service management. Our team provides training and documentation to ensure your team is equipped to manage the platform effectively."
     },
     {
-      question: "Do you provide training on how to manage my website?",
-      answer: "Yes! We provide comprehensive training sessions to help you manage your website content, update products (for e-commerce sites), and use any custom features we've built. We also provide documentation and video tutorials, and our support team is always available to help with any questions."
+      question: "Can you help with digital transformation for traditional businesses?",
+      answer: "Yes, we specialize in guiding traditional businesses through digital transformation. Our approach combines strategic consulting with technical implementation, helping you modernize operations, improve customer experiences, and unlock new digital revenue streams. We focus on creating sustainable digital solutions that align with your business goals."
     },
     {
-      question: "What are your payment terms?",
-      answer: "We typically work with a 50% deposit to start the project and 50% upon completion. For larger projects, we can arrange milestone-based payments. We accept various payment methods including bank transfers, credit cards, and digital payment platforms. Payment terms are always discussed and agreed upon before project commencement."
+      question: "How do you ensure our solution works across different regions?",
+      answer: "We take a global-first approach to development, considering internationalization (i18n) and localization (l10n) from the start. Our team includes professionals from diverse backgrounds who understand cultural nuances. We conduct thorough market research and user testing to ensure your solution resonates with audiences worldwide while maintaining a consistent brand experience."
     }
   ];
 
@@ -59,10 +59,10 @@ const FAQ = () => {
             <HelpCircle className="h-12 w-12 text-primary-600" />
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
+            Your Questions, Answered
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about our services, process, and pricing
+            Everything you need to know about working with Pixelforge in the African digital landscape
           </p>
         </div>
 
@@ -119,12 +119,12 @@ const FAQ = () => {
                 Contact Us
               </button>
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/2348168829686"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-green-500 text-green-600 hover:bg-green-50 px-8 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
               >
-                <span>WhatsApp Us</span>
+                <span>Chat on WhatsApp</span>
               </a>
             </div>
           </div>

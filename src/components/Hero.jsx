@@ -38,16 +38,16 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
-            Transform Your Business
+            Crafting Digital Excellence
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-primary-400">
-              Digitally
+              With Pixel Precision
             </span>
           </h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-            We help ambitious businesses grow through strategic digital marketing, 
-            stunning web design, and data-driven solutions that deliver real results.
+            At Pixelforge, we transform ideas into exceptional digital experiences through innovative 
+            design, strategic development, and data-driven solutions that drive real business growth.
           </p>
 
           {/* Benefits List */}
