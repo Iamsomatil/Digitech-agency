@@ -5,13 +5,17 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { compression } from 'vite-plugin-compression2';
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/pixelforge/' : '/',
+  base: '/',
   plugins: [
     react(),
     // PWA support
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      workbox: {
+        // Ensure the service worker is registered at the root
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+      },
       manifest: {
         name: 'Pixelforge - Digital Solutions for Africa',
         short_name: 'Pixelforge',
