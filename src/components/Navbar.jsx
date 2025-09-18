@@ -105,27 +105,30 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md w-full text-left transition-colors duration-200"
-              >
-                {item.name}
-              </button>
-            ))}
+      <div
+        className={`lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 transform transition-all duration-300 ease-out overflow-hidden ${
+          isOpen ? 'max-h-screen opacity-100 translate-y-0 pointer-events-auto' : 'max-h-0 opacity-0 -translate-y-2 pointer-events-none'
+        }`}
+        aria-hidden={!isOpen}
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {navItems.map((item) => (
             <button
-              onClick={() => scrollToSection('contact')}
-              className="w-full mt-4 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md w-full text-left transition-colors duration-200"
             >
-              Get Started
+              {item.name}
             </button>
-          </div>
+          ))}
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="w-full mt-4 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
+          >
+            Get Started
+          </button>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
